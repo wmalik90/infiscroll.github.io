@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Home';
 import ReactGA from 'react-ga';
-const GA_MEASUREMENT_ID = 'G-N51B4Y11MN';
+const GA_MEASUREMENT_ID = 'UA-266516599-1';
   ReactGA.initialize(GA_MEASUREMENT_ID);
 
 
