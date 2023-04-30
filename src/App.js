@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
 
-}, []);
+}, [window.location.pathname]);
 
   return (
     <>
