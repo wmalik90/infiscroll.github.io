@@ -4,15 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Home';
 const GA_MEASUREMENT_ID = 'G-N51B4Y11MN';
 
-const sendPageview = () => {
-  const url = `https://www.google-analytics.com/g/collect?v=2&tid=${GA_MEASUREMENT_ID}&cid=${Math.random()}&t=pageview&dp=${window.location.pathname}&ua=navigator.userAgent`;
-  fetch(url, { method: 'POST' });
+setGA = () => {
+  ReactGA.initialize(GA_MEASUREMENT_ID);
+  ReactGA.pageview(window.location.pathname);
 };
-
 
 function App() {
   useEffect(() => {
-    sendPageview();
+    setGA();
   }, []);
 
   return (
