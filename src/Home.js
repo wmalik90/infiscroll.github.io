@@ -3,8 +3,14 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import axios from 'axios'
 import CalendarComponent from './CalenderComponent';
 import { FileLoading } from './FileLoading/FileLoading';
+import ReactGA from 'react-ga';
 
 const Home = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
       /////comm
   const [passengers, setPassengers] = useState([]);
   const style = {
